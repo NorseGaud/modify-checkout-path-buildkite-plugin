@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export BUILDKITE_BUILD_CHECKOUT_PATH=$(echo "$BUILDKITE_BUILD_CHECKOUT_PATH" | eval sed "s?$BUILDKITE_PLUGIN_MODIFY_CHECKOUT_PATH_PATTERN?g")
+if [[ ${BUILDKITE_PLUGIN_MODIFY_CHECKOUT_PATH_CLEANUP:-false} == true ]]; then
+  echo "--- Cleaning up $BUILDKITE_BUILD_CHECKOUT_PATH"
+  rm -rf $BUILDKITE_BUILD_CHECKOUT_PATH
+else
+  echo "--- Skipping cleanup of $BUILDKITE_BUILD_CHECKOUT_PATH"
+fi

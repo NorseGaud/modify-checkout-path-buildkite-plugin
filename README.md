@@ -17,11 +17,15 @@ Original: `/this/is/a/path/to/replace`
 Modified: `/this/is/a/path/we/want`
 
 ### Support for Interpolation
+
+- if `cleanup` is set to true, it will delete the directory it cloned into as part of the pre-exit hook
+
 ```yml
 steps:
   - plugins:
       - NorseGaud/modify-checkout-path#v0.0.1:
           pattern: "$${BUILDKITE_AGENT_NAME}?$BUILDKITE_BUILD_ID"
+          cleanup: true
 ```
 
 Original: `/home/kubernetes/flexvolume/buildkite/builds/buildkite-eks-agents-builder-b6n5r-t44-1/REPO`

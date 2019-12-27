@@ -6,4 +6,6 @@ configuration:
   properties:
     pattern:
       type: string
+    cleanup:
+      type: boolean
   required: []
