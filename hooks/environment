@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -euo pipefail
 
 if [[ -n ${BUILDKITE_PLUGIN_MODIFY_CHECKOUT_PATH_PATTERN+x} ]]; then
