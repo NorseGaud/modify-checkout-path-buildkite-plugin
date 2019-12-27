@@ -1,0 +1,9 @@
+name: Modify BUILDKITE_BUILD_CHECKOUT_PATH
+description: Uses sed to modify BUILDKITE_BUILD_CHECKOUT_PATH in the Environment hook
+author: https://github.com/NorseGaud
+requirements: []
+configuration:
+  properties:
+    pattern:
+      type: string
+  required: []
