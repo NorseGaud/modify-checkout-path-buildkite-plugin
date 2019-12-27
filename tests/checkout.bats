@@ -19,6 +19,5 @@ environment_hook="$PWD/hooks/environment"
   run "$environment_hook"
 
   assert_success
-  assert [ $BUILDKITE_BUILD_CHECKOUT_PATH = "/tmp2/$TMP_DIR_FILE_NAME" ]
-  assert_output --partial "Cshanged BUILDKITE_BUILD_CHECKOUT_PATH"
+  assert_output --partial "Changed BUILDKITE_BUILD_CHECKOUT_PATH to /tmp2/$TMP_DIR_FILE_NAME"
 }
